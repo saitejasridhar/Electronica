@@ -1,0 +1,217 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, hr, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin:0; padding:0; border:0; background:transparent;
+
+}
+
+/* lists */
+.list-full, .list-full li,
+.list-auto, .list-auto li { width: 100%; float: left; display: block; position: relative; }
+.list-auto, .list-auto li { width: auto; }
+
+/* floats */
+.float-l { float: left; }
+.float-r { float: right;
+padding-right: 1%;}
+
+header {
+
+  min-height: 80px;
+  margin-top: 20px;
+  right: 0;
+  left: 0;
+  background: #ffffff;
+  z-index: 2;
+}
+
+header h1 {
+  padding: 10px 0 0 10px;
+}
+
+header h1 a {
+
+  color: rgb(0, 0, 0);
+  padding-left: 20%;
+
+}
+
+header ul {
+  padding: 15px 10px 0 0;
+}
+
+header li {
+  border-left: 1px solid rgb(0, 0, 0);
+}
+
+header li:first-child {
+  border: none;
+}
+
+header li a {
+  display: block;
+  padding: 0 10px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 60;
+  text-decoration: none;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+header li a:hover {
+  color: rgb(228, 103, 20);
+  cursor: pointer;
+}
+
+input#control-nav {
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  header nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 65%;
+    height: 100%;
+    background: #1f1d1d;/* side menu*/
+    overflow-x: auto;
+    z-index: 2;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+
+  header ul.list-auto {
+    padding: 0;
+  }
+
+  header ul.list-auto li {
+    width: 100%;
+    border: solid rgb(0, 0, 0);/*lines in list*/
+    border-width: 0 0 3px;
+
+  }
+
+  header li a {
+    padding: 15px 10px;
+  }
+
+  header li a:hover {
+    background-color: rgba(29, 25, 25, 0.493);/* highlight list */
+  }
+
+  .control-nav {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: block;
+    width: 30px;
+    padding: 5px 0;
+    border: solid rgb(0, 0, 0);/* top & bottom burger */
+    border-width: 3px 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .control-nav:before {
+    content: "";
+    display: block;
+    height: 3px;
+    background: rgb(0, 0, 0);/* centre burger */
+  }
+
+  .control-nav-close {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.1);/* trans*/
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+
+
+
+
+  input#control-nav:checked ~ nav,
+  input#control-nav:checked ~ .control-nav-close {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .highlights {
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+  }
+
+  .highlights-item {
+    width: 100%;
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  .highlights-buttons {
+    display: block;
+    padding-top: 10px;
+  }
+
+  /*checked*/
+  .highlights input:checked + div {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .highlights input:checked + div p {
+    opacity: 1;
+  }
+
+  .highlights input:nth-of-type(1):checked ~ .highlights-buttons label:nth-child(1),
+  .highlights input:nth-of-type(2):checked ~ .highlights-buttons label:nth-child(2),
+  .highlights input:nth-of-type(3):checked ~ .highlights-buttons label:nth-child(3) {
+    background-color: #000
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}

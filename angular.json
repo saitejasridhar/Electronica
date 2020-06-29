@@ -24,9 +24,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "/Users/saiteja/Desktop/tes/my/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": ["/Users/saiteja/Desktop/tes/my/node_modules/jquery/dist/jquery.slim.min.js",
+              "/Users/saiteja/Desktop/tes/my/node_modules/bootstrap/dist/js/bootstrap.js"]
           },
           "configurations": {
             "production": {
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "my"
+    }
+  },
+  "defaultProject": "my",
+  "cli": {
+    "analytics": "df686223-c0d4-4298-be8d-413da20121d8"
+  }
 }

@@ -1,0 +1,26 @@
+#one
+{
+position:relative;
+}
+
+.container-fluid
+{
+	padding-right:0px;
+	padding-left:0px;
+}
+
+.carousel-caption
+{
+  width: 400px;
+    padding-top:20px;
+    bottom: 200px;
+    margin-left: 550px;
+    text-align: left;
+    font-size: 17px;
+
+}
+.hclass
+{ font-size:30px;
+	font-weight:bolder;
+	text-transform:capitalize;
+}
