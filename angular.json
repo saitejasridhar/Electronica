@@ -25,10 +25,10 @@
             ],
             "styles": [
               "src/styles.css",
-              "/Users/saiteja/Desktop/tes/my/node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": ["/Users/saiteja/Desktop/tes/my/node_modules/jquery/dist/jquery.slim.min.js",
-              "/Users/saiteja/Desktop/tes/my/node_modules/bootstrap/dist/js/bootstrap.js"]
+            "scripts": ["./node_modules/jquery/dist/jquery.slim.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"]
           },
           "configurations": {
             "production": {
